@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<HTML>
+<Head>
+	<script src="application.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>My Shopping List</title>
+</Head>
+<Body>
+	<div id="background">
+		<div id="listPaper">
+			<img src="./images/old_paper.jpg">
+		</div>
+		<div id="shopping-list">
+			<h1>My Shopping List</h1>
+			<div id="item_entry">
+				<h2>I need to buy...</h2>
+				<form name="shopping-addition" action="listAdd.pl" onsubmit="return checkscript()">
+				<input type=text size=18 name=item value="Item" class="text-entry">
+				<input type=text size=18 name=quantity value="Quantity" class="text-entry">
+				<input type="button" id="Button" value="Add" onclick="submit();"/>
+				</form>
+			</div>
+			<div id="list">
+				<h2>My List</h2>
+				<table>
+				<tr>
+				<th>Item</th>
+				<th>Quantity</th>
+				</tr>
+				<tr>
+				<td>Eggs</td>
+				<td>5 cartons</td>
+				</tr>
+				<tr>
+				<td>row 2, cell 1</td>
+				<td>row 2, cell 2</td>
+				</tr>
+				</table> 
+			</div>
+		</div>
+	</div>
+</Body>
+</HTML>
