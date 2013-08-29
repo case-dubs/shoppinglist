@@ -12,12 +12,11 @@ body{
 	background: 
 		url('./images/wood_background.jpg') 100% no-repeat;
 	background-size: cover;
-	height: 1200px;
+/*	height: 1200px;*/
 	min-width: 1040px;
 	margin-left: auto;
 	margin-right: auto;
 	position: absolute;
-	min-width: 1040px;
 }
 
 #listPaper {
@@ -30,7 +29,7 @@ body{
 	margin-right: auto;
 	position: relative;
 	background: 
-		url('./images/old_paper.jpg') 100% no-repeat;
+		url('./images/old_paper.jpg') no-repeat;
 	background-size: cover;
 	margin-top: 75px;
 }
