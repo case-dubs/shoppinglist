@@ -22,18 +22,31 @@ function submit() {
 	newEntry.quantity = quantityVal;
 
 	console.log(newEntry);
-//		myList.prototype.newEntry = submit();
-	myList.push(newEntry);
-
-	//does either of these add the new entry into the myList array?
+	myList[0] = newEntry;
+//if each newEntry that's added is then pushed to the array, I can't write "0" because it will erase the one before it
 };
 
+//When someone clicks "update list", how do I check which items were checked?
+//how do i differentiate between the two submit types (add and updates)??
 
+function submit(){
+	if (document.forms[0].item.checked) {
+		var checkedItem = document.forms[0].item.checked;
+		checkedItem.remove();
+	}
+};
 //Once I've stored a new listItem, how do I add it to myList? !!! I'm lost on this!
 
 //How do I add new TRs (each with a check box, item and quantity values when a newEntry is added)? {I think I need to find the location in the dom and create a new tr - not sure how to do this, especially with the check box }
 
-//When someone clicks "update list", how do I check which items were checked?
+/*When someone clicks "update list", how do I check which items were checked?
+
+
+if (document.forms[0].item.checked) {
+	user_input = document.forms[0].checkbox.name
+}
+
+
 
 //How do I remove checked items?
 
