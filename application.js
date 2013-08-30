@@ -27,25 +27,31 @@ function submit() {
 	var quantityField = document.getElementById('quantity');
 	var quantityVal = quantityField.value;
 
-	var newRow = document.createElement("tr");
+	if (isNaN(quantityVal)) {
+		console.log("Nan");
+		alert("Don't forget to enter a NUMBER in the quantity field");
+	}
+
+	else {
+		var newRow = document.createElement("tr");
 	
-	var newCell1 = document.createElement("td");
-	var itemCellVal = document.createTextNode(itemVal);
+		var newCell1 = document.createElement("td");
+		var itemCellVal = document.createTextNode(itemVal);
 
-	var checkBox = document.createElement("input");
-	checkBox.type = "checkbox";
-	newCell1.appendChild(checkBox);
-	newCell1.appendChild(itemCellVal);
+		var checkBox = document.createElement("input");
+		checkBox.type = "checkbox";
+		newCell1.appendChild(checkBox);
+		newCell1.appendChild(itemCellVal);
 
-	var newCell2 = document.createElement("td");
-	var quantityCellVal = document.createTextNode(quantityVal);
-	newCell2.appendChild(quantityCellVal);
+		var newCell2 = document.createElement("td");
+		var quantityCellVal = document.createTextNode(quantityVal);
+		newCell2.appendChild(quantityCellVal);
 
-		//var cellItem = document.createTextNode(myList.item);
-	newRow.appendChild(newCell1);
-	newRow.appendChild(newCell2);
-	var table = document.getElementById("table");
-	table.appendChild(newRow);
+		newRow.appendChild(newCell1);
+		newRow.appendChild(newCell2);
+		var table = document.getElementById("table");
+		table.appendChild(newRow);
+	}
 	
 };
 

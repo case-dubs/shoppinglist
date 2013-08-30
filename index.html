@@ -9,14 +9,13 @@
 <Body>
 	<div id="background">
 		<div id="listPaper">
-			<!--<img src="./images/old_paper.jpg">-->
 		
 			<div id="shopping-list">
 				<h1>My Shopping List</h1>
 				<div id="item_entry">
 					<h2>I need to buy...</h2>
-					<input type="text" size="18px" name="item" onfocus="eraseContent(this)" value="Item" id="item" class="text-entry">
-					<input type="text" size="18px" name="quantity" onfocus="eraseContent(this)" value="Quantity" id="quantity" class="text-entry" onkeydown="if (event.keyCode == 13) document.getElementById('add-button').click()"/>
+					<input type="text" size="18px" name="item" placeholder="Item" id="item" class="text-entry">
+					<input type="text" size="18px" name="quantity" placeholder="Quantity" id="quantity" class="text-entry" onkeydown="if (event.keyCode == 13) document.getElementById('add-button').click()"/>
 					<input type="button" id="add-button" class="Button" value="Add" onclick="submit();"/>
 				</div>
 				<div id="list">
@@ -30,7 +29,7 @@
 						</table> 
 <!-- should the form be activated with button "onclick" , form "onsubmit" both? eg site explanation: <form action="something.pl" onsubmit="return checkscript()"> -->
 					</form>	
-					<input type="button" class="Button" value="Update List" onclick="updates();"/>
+					<input type="button" class="Button" value="Delete Checked Items" onclick="updates();"/>
 				</div>
 			</div>
 		</div>
