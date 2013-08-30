@@ -4,6 +4,12 @@ function eraseContent (x){
 	x.value = " ";
 }
 
+$("quantity").keyup(function(event){
+    if(event.keyCode == 13){
+        $("add-button").click();
+    }
+});
+
 function listItem (item, quantity) {
 	this.item = item;
 	this.quantity = quantity;

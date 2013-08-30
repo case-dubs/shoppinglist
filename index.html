@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <HTML>
 <Head>
+	<script src="./jquery-1.10.2.js"></script> 
 	<script src="application.js"></script>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<title>My Shopping List</title>
@@ -15,8 +16,8 @@
 				<div id="item_entry">
 					<h2>I need to buy...</h2>
 					<input type="text" size="18px" name="item" onfocus="eraseContent(this)" value="Item" id="item" class="text-entry">
-					<input type="text" size="18px" name="quantity" onfocus="eraseContent(this)" value="Quantity" id="quantity" class="text-entry">
-					<input type="button" class="Button" value="Add" onclick="submit();"/>
+					<input type="text" size="18px" name="quantity" onfocus="eraseContent(this)" value="Quantity" id="quantity" class="text-entry" onkeydown="if (event.keyCode == 13) document.getElementById('add-button').click()"/>
+					<input type="button" id="add-button" class="Button" value="Add" onclick="submit();"/>
 				</div>
 				<div id="list">
 					<h2>My List</h2>
